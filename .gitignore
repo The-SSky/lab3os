@@ -1,0 +1,12 @@
+# VS Code
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# my files
+tester.py
+run.pyw
+merger.pyw 
