@@ -1,6 +1,6 @@
-from tester import format_output
+#from tester import format_output
 
-def lab3_help(command_argument=None):
+def lab3_help(screen, *args):
     _default = \
     """
 Для получения сведений об определенной команде наберите HELP <имя команды>
@@ -459,10 +459,14 @@ TYPE           Отображает содержимое текстовых фа
 
 
 
-    if command_argument is None: return _default
+    if not args[0]:
+        screen.current_screen = _default
+        return
 
-    if command_argument in answers.keys():
-        return answers[command_argument]
+    if args[0][0] in answers.keys():
+        screen.current_screen = answers[args[0][0]]
+    else:
+        screen.current_screen = "Данная команда не поддерживается.\r\n"
 
 
 def lab3_cls():

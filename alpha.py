@@ -25,9 +25,20 @@ class Lab3CLI():
 
         self.current_screen = self.headers + f'{self.cwd}>'
 
-    def parse_input(self, input):
-        pass
+    def parse_input(self):
+        args = input().upper().split(' ')
+
+        if args[0] in commands.keys():
+            commands[args[0]](self, args[1:])
+        else:
+            self.current_screen = f"{args[0]} не является внутренней или внешней командой\r\n"
+        
+        self.current_screen += f'\n{self.cwd}>'
+        
 
 
-a = Lab3CLI()
-print(a.current_screen)
+screen = Lab3CLI()
+
+while True:
+    print(screen.current_screen, end='')
+    screen.parse_input()
