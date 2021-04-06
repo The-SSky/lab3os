@@ -467,8 +467,4 @@ TYPE           Отображает содержимое текстовых фа
         screen.current_screen = answers[args[0][0]]
     else:
         screen.current_screen = "Данная команда не поддерживается.\r\n"
-
-
-def lab3_cls():
-    import subprocess
-    subprocess.Popen("CLS", shell=True, stdout=subprocess.PIPE).stdout
+        
