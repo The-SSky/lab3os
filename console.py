@@ -1,4 +1,5 @@
 import sys
+import os
 from commands import commands
 
 header = "Лабораторная Работа №3. [Version 0.01] \n"
@@ -20,20 +21,19 @@ class Lab3CLI():
     def __init__(self):
         self.headers = "Лабораторная Работа №3. [Version 0.01] \n " \
         + "Эмулятор командной строки Windows \n\n"
-        _index = sys.argv[0].rfind('\\')
-        self.cwd = sys.argv[0][:_index]
+        self.cwd = os.getcwd()
 
         self.current_screen = self.headers + f'{self.cwd}>'
 
     def parse_input(self):
-        args = input().upper().split(' ')
+        args = input().split(' ')
 
-        if args[0] in commands.keys():
-            commands[args[0]](self, args[1:])
+        if args[0].upper() in commands.keys():
+            commands[args[0].upper()](self, args[1:])
         else:
             self.current_screen = f"{args[0]} не является внутренней или внешней командой\r\n"
         
-        self.current_screen += f'\n{self.cwd}>'
+        self.current_screen += f'\n{self.cwd.lower()}>'
         
 
 

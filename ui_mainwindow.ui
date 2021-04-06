@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QFrame" name="centralFrame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>460</width>
+      <height>680</height>
+     </rect>
+    </property>
+    <property name="accessibleName">
+     <string>centralFrame</string>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: rgb(2, 200, 255);
+}
+
+QFrame[objectName^=&quot;centralFrame&quot;] {
+background-color: rgb(28, 33, 38);
+border-radius: 10px;
+}
+
+QFrame[objectName^=&quot;titleBar&quot;] {
+background-color: none;
+}
+
+QPushButton[objectName^=&quot;closeButton&quot;] {
+	border: none;
+	border-radius: 8px;		
+	background-color: rgba(255, 0, 0, 150);
+}
+
+QPushButton[objectName^=&quot;closeButton&quot;]:hover {		
+	background-color: rgb(255, 0, 0);
+}
+
+QPushButton[objectName^=&quot;minimizeButton&quot;] {
+	border: none;
+	border-radius: 8px;		
+	background-color: rgba(255, 245, 0, 150);
+}
+
+QPushButton[objectName^=&quot;minimizeButton&quot;]:hover {		
+	background-color: rgb(255, 245, 0);
+}
+
+QLabel[objectName^=&quot;titleLabel&quot;]{
+	font: 11pt &quot;Tahoma&quot;;
+	color: rgb(2, 200, 255);
+}
+
+QPushButton {		
+	border-style: outset;
+	border: 1px solid;
+	alternate-background-color: rgb(255, 255, 0);
+	background-color: rgba(0, 200, 0, 150);
+	gridline-color: rgb(255, 255, 255);
+	border-radius: 5px;	
+	font: 12pt &quot;Yu Gothic UI&quot;;
+    padding-bottom: 3px;
+}
+
+
+QPushButton:pressed {
+    background-color: rgb(0, 200, 0);
+    border-style: inset;
+	border-bottom-color: &quot;gray&quot;;
+}
+
+QPushButton[objectName^=&quot;enterButton&quot;] {		
+	border-style: outset;
+	border: 1px solid;
+	alternate-background-color: rgb(255, 255, 0);
+	background-color: rgba(255, 0, 0, 150);
+	gridline-color: rgb(255, 255, 255);
+	border-radius: 5px;	
+	font: 12pt &quot;Yu Gothic UI&quot;;
+    padding-bottom: 3px;
+}
+
+QPushButton#enterButton:pressed {
+    background-color: rgb(200, 0, 0);
+    border-style: inset;
+	border-bottom-color: &quot;gray&quot;;
+}
+
+QListWidget{
+    background-color: #8AC8FF;
+}
+
+QLineEdit{
+    background-color: #8AC8FF;
+    border: 1px solid rgb(52, 59, 72);
+}
+
+QTextEdit{
+    background-color: #8AC8FF;
+    border: 1px solid rgb(52, 59, 72);
+}
+
+/* CHECKBOX */
+QCheckBox::indicator {
+    border: 3px solid rgb(52, 59, 72);
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+QCheckBox::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+
+}
+QCheckBox::indicator:checked {
+	background-image: url(cil-check.png);
+    background: 3px solid #8AC8FF;
+	border: 3px solid rgb(52, 59, 72);	
+}
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="titleBar">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>460</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QFrame" name="btnsFrame">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>0</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="closeButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>67</x>
+         <y>12</y>
+         <width>17</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="accessibleName">
+        <string>closeButton</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="minimizeButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>12</y>
+         <width>17</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>17</width>
+         <height>17</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Minimize</string>
+       </property>
+       <property name="accessibleName">
+        <string>minimizeButton</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="titleFrame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>360</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="titleLabel">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>0</y>
+         <width>345</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="accessibleName">
+        <string>titleLabel</string>
+       </property>
+       <property name="text">
+        <string>Lab Project 03 - Balabin</string>
+       </property>
+      </widget>
+     </widget>
+     <zorder>titleFrame</zorder>
+     <zorder>btnsFrame</zorder>
+    </widget>
+    <widget class="QPushButton" name="createFolderButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>170</y>
+       <width>125</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="accessibleName">
+      <string>testButton</string>
+     </property>
+     <property name="text">
+      <string>Создать Папку</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>130</y>
+       <width>430</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="createFileButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>170</y>
+       <width>125</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="accessibleName">
+      <string>testButton</string>
+     </property>
+     <property name="text">
+      <string>Создать Файл</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainLabel">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>381</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="accessibleName">
+      <string>titleLabel</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Файловая система EXT, ограничение:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;максимальная длина имени файла - 255&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>220</y>
+       <width>430</width>
+       <height>400</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="infoButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>125</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="accessibleName">
+      <string>testButton</string>
+     </property>
+     <property name="text">
+      <string>Информация</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cmdButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>640</y>
+       <width>125</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="accessibleName">
+      <string>testButton</string>
+     </property>
+     <property name="text">
+      <string>CMD</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>minimizeButton</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

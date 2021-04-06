@@ -463,7 +463,7 @@ TYPE           Отображает содержимое текстовых фа
         screen.current_screen = _default
         return
 
-    if args[0][0] in answers.keys():
+    if args[0][0].upper() in answers.keys():
         screen.current_screen = answers[args[0][0]]
     else:
         screen.current_screen = "Данная команда не поддерживается.\r\n"
