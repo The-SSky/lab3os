@@ -61,7 +61,8 @@ class MainWindow(QMainWindow):
         
         for i, name in enumerate(result):
             result[i] = name.replace('\\', '/', -1)
-        path = self.ui.textEdit.setText('\n'.join(result))
+            result[i] = correct_file_length(name) + '/'
+        self.ui.textEdit.setText('\n'.join(result))
 
 
     def createFileButton_onclick(self):
