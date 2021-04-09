@@ -28,8 +28,9 @@ class Lab3CLI():
     def parse_input(self):
         args = input().split(' ')
 
-        if args[0].upper() in commands.keys():
-            commands[args[0].upper()](self, args[1:])
+        args[0] = args[0].upper()        
+        if args[0] in commands.keys():
+            commands[args[0]](self, args[1:])
         else:
             self.current_screen = f"{args[0]} не является внутренней или внешней командой\r\n"
         

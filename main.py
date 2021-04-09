@@ -7,7 +7,7 @@ from PyQt5.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime
 from PyQt5.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PyQt5.QtWidgets import *
 
-from src.lab3 import correct_file_length
+from src.lab3 import correct_file_length, get_folder_size
 
 # GUI FILE
 from ui_mainwindow import Ui_MainWindow
@@ -62,6 +62,7 @@ class MainWindow(QMainWindow):
         for i, name in enumerate(result):
             result[i] = name.replace('\\', '/', -1)
             result[i] = correct_file_length(name) + '/'
+            result[i] = result[i] + f', {get_folder_size(result[i])} kb'
         self.ui.textEdit.setText('\n'.join(result))
 
 
