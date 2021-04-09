@@ -344,7 +344,7 @@ QCheckBox::indicator:checked {
       <string>titleLabel</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Файловая система EXT, ограничение:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;максимальная длина имени файла - &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;255&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Файловая система EXT, ограничение:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;максимальная длина имени файла - 255&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit">
@@ -368,15 +368,6 @@ QCheckBox::indicator:checked {
        <width>125</width>
        <height>24</height>
       </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Yu Gothic UI</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
      </property>
      <property name="accessibleName">
       <string>testButton</string>
